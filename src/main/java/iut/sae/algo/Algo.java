@@ -6,7 +6,7 @@ public class Algo{
         String rle = "";
         int count = 1;
         for (int i = 0; i < in.length(); i++) {
-            if (i + 1 < in.length() && in.charAt(i) == in.charAt(i + 1)) {
+            if (i + 1 < in.length() && in.charAt(i) == in.charAt(i + 1) && count!=9) {
                 count++;
             } else {
                 rle += count + "" + in.charAt(i);
@@ -22,7 +22,7 @@ public class Algo{
         for(int i=0;i<=iteration;i++){
             int count = 1;
             for (int j = 0; j < in.length(); j++) {
-                if (j + 1 < in.length() && in.charAt(j) == in.charAt(j + 1)) {
+                if (j + 1 < in.length() && in.charAt(j) == in.charAt(j + 1) && count!=9) {
                     count++;
                 } else {
                     rle += count + "" + in.charAt(j);
