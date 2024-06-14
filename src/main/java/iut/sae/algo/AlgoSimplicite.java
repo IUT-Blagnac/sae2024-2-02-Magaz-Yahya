@@ -9,7 +9,7 @@ public class AlgoSimplicite{
             if (i+1 < in.length() && in.charAt(i) == in.charAt(i+1) && compteur!=9) {
                 compteur++;
             } else {
-                rle += compteur + "" + in.charAt(i);
+                rle += compteur + "" + in.charAt(i);//Transforme le compteur et le caractère en String
                 compteur = 1;
             }
         }
@@ -20,9 +20,7 @@ public class AlgoSimplicite{
     public static String RLE(String in, int iteration) throws AlgoException{
         String resultat=in;
         for(int i=0;i<iteration;i++){
-            resultat=RLE(in);
-            in=resultat;
-
+            resultat=RLE(resultat);
         }
         return resultat;
     }
@@ -31,9 +29,9 @@ public class AlgoSimplicite{
         String resultat = "";
         int tailleIn = in.length();
         for (int i = 0; i < tailleIn; i++) {
-            int nbBoucle = Integer.parseInt("" + in.charAt(i));
+            int nbBoucle = in.charAt(i) - '0';//Transforme un caractère en entier.
             i++;
-            char caractere = in.charAt(i);
+            char caractere = in.charAt(i);//Récupère le caractère à l'indice i de la chaîne de caractères.
             for (int j = 0; j < nbBoucle; j++) {
                 resultat += caractere;
             }
@@ -46,8 +44,7 @@ public class AlgoSimplicite{
     public static String unRLE(String in, int iteration) throws AlgoException{
         String resultat=in;
         for(int i=0;i<iteration;i++){
-            resultat=unRLE(in);
-            in=resultat;
+            resultat=unRLE(resultat);
 
         }
         return resultat; 

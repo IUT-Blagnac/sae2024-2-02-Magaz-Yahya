@@ -1,7 +1,7 @@
 package iut.sae.algo;
 
 
-public class Algo{
+public class AlgoSobriété{
     public static String RLE(String in) {
     StringBuilder rle = new StringBuilder();
     int count = 1;
