@@ -1,23 +1,20 @@
 package iut.sae.algo;
 
 
-public class Algo{
+public class AlgoSimplicite{
     public static String RLE(String in) {
-        StringBuilder rle = new StringBuilder();
+        String rle = "";
         int compteur = 1;
-        int TailleIn=in.length();
-        for (int i = 0; i < TailleIn; i++) {
+        for (int i = 0; i < in.length(); i++) {
             if (i+1 < in.length() && in.charAt(i) == in.charAt(i+1) && compteur!=9) {
                 compteur++;
             } else {
-                rle.append(compteur).append(in.charAt(i));
+                rle += compteur + "" + in.charAt(i);
                 compteur = 1;
             }
         }
-        return rle.toString();
+        return rle;
     }
-
-
     
 
     public static String RLE(String in, int iteration) throws AlgoException{
