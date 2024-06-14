@@ -18,26 +18,16 @@ public class Algo{
     
 
     public static String RLE(String in, int iteration) throws AlgoException{
-        String rle = "";
-        for(int i=0;i<=iteration;i++){
-            int count = 1;
-            for (int j = 0; j < in.length(); j++) {
-                if (j + 1 < in.length() && in.charAt(j) == in.charAt(j + 1) && count!=9) {
-                    count++;
-                } else {
-                    rle += count + "" + in.charAt(j);
-                    count = 1;
-                }
-                in=rle;
-            }
-            
+        String resultat=in;
+        for(int i=0;i<iteration;i++){
+            resultat=RLE(in);
+            in=resultat;
+
         }
-        return rle;
+        return resultat;
     }
 
-    public static String unRLE(String in) throws AlgoException{
-        // Provide your algo here
-        return "NotYetImplemented";
+    public static String unRLE(String in) throws AlgoException {
 
     }
 
