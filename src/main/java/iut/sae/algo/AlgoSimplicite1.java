@@ -1,70 +1,61 @@
 package iut.sae.algo;
 
+
 public class AlgoSimplicite1 {
 
     public static String RLE(String in) {
-        // On verifie que la chaine a lentree n'est pas null
-        if (in.isEmpty()) {
+        if (in == null || in.isEmpty()) {
             return "";
         }
-
-        StringBuilder sb = new StringBuilder();
-
+        StringBuilder code = new StringBuilder();
+        int longueur = in.length();
         int cpt = 1;
+        for (int i = 0; i < longueur; i++) {
+            char currentChar = in.charAt(i);
+            while (i + 1 < longueur && currentChar == in.charAt(i + 1) && cpt < 9) {
+                cpt++;
+                i++;
+            }
+            code.append(cpt).append(currentChar);
+            cpt = 1;
+        }
 
-        for (int i = 1; i < in.length(); i++) {
-            if (in.charAt(i) == in.charAt(i - 1)) {
-                if (cpt < 9) {
-                    cpt++;
-                } else {
-                    sb.append(9).append(in.charAt(i - 1));
-                    cpt = 1;
+        return code.toString();
+    }
+
+    public static String RLE(String in, int iterations) {
+        String code = in;
+        for (int i = 0; i < iterations; i++) {
+            code = RLE(code);
+        }
+        return code;
+    }
+
+    public static String unRLE(String in) {
+        if (in == null || in.isEmpty()) {
+            return "";
+        }
+        StringBuilder code = new StringBuilder();
+        int longueur = in.length();
+        for (int i = 0; i < longueur; i += 2) {
+            if (i + 1 < longueur && Character.isDigit(in.charAt(i))) {
+                int cpt = Character.getNumericValue(in.charAt(i));
+                char character = in.charAt(i + 1);
+                for (int j = 0; j < cpt; j++) {
+                    code.append(character);
                 }
             } else {
-                sb.append(cpt).append(in.charAt(i - 1));
-                cpt = 1;
+                return "";
             }
         }
-        sb.append(cpt).append(in.charAt(in.length() - 1));
-        return sb.toString();
-
+        return code.toString();
     }
 
-    public static String RLE(String in, int iteration) throws AlgoException {
-        if (iteration == 1 || in.isEmpty()) {
-            return RLE(in);
-        } else {
-            return RLE(RLE(in, 1), iteration - 1);
+    public static String unRLE(String in, int iterations) {
+        String code = in;
+        for (int i = 0; i < iterations; i++) {
+            code = unRLE(code);
         }
+        return code;
     }
-
-    public static String unRLE(String in) throws AlgoException {
-        // On vérifie que la chaîne d'entrée n'est pas vide
-        if (in.isEmpty()) {
-            return "";
-        }
-
-        StringBuilder sb = new StringBuilder();
-
-        for (int i = 0; i < in.length(); i++) {
-            char cptCaractere = in.charAt(i);
-            int cpt = Character.getNumericValue(cptCaractere);
-            char caractere = in.charAt(++i);
-            for (int j = 0; j < cpt; j++) {
-                sb.append(caractere);
-            }
-        }
-        return sb.toString();
-    }
-
-    public static String unRLE(String in, int iteration) throws AlgoException {
-
-        if (iteration == 1 || in.isEmpty()) {
-            return unRLE(in);
-        } else {
-            return unRLE(unRLE(in, 1), iteration - 1);
-        }
-
-    }
-
 }
