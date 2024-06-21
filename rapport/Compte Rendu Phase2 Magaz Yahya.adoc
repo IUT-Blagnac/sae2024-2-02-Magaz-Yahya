@@ -40,7 +40,7 @@ Ces outils combinés m'ont permis d'évaluer de manière approfondie chaque solu
 Cet algorithme utilise une approche simple pour compresser une chaîne de caractères en comptant les séquences répétées. La syntaxe claire de Python le rend facile à comprendre et à suivre. Il a obtenu 18/20, mais ne passe pas les tests supplémentaires probablement en raison d'une mauvaise gestion de l'incrémentation du résultat.
 
 . Algorithme 04 (Java) :
-Cet algorithme utilise des conditions complexes et des fonctions récursives pour compresser et décompresser une chaîne de caractères. Il gère les erreurs avec AlgoException. Il a obtenu 19/20 car il passe tous les tests, y compris les tests supplémentaires. Il se distingue par sa capacité à gérer toutes les exigences du projet.
+Cet algorithme utilise des conditions complexes et des fonctions récursives pour compresser et décompresser une chaîne de caractères. Il gère les erreurs avec AlgoException. Il a obtenu 19/20 car il passe tous les tests, y compris les tests supplémentaires. Il se distingue par sa capacité à gérer toutes les exigences.
 
 . Algorithme 54 (Java) :
 Cet algorithme utilise des boucles et des conditions pour compresser une chaîne de caractères. Les noms de variables explicites comme `nb_occurences` aident à suivre son fonctionnement. Il a obtenu 7/20 car il n'a complété que la moitié des algorithmes requis. Cependant, ce qu'il a implémenté reste simple et facile à suivre.
@@ -49,7 +49,7 @@ Cet algorithme utilise des boucles et des conditions pour compresser une chaîne
 Cet algorithme utilise des boucles et des conditions simples pour compresser une chaîne de caractères. Les variables comme `indice` et `nbCar` sont intuitivement nommées. Il a obtenu 7/20 car il n'a pas implémenté les deux méthodes avec itérations, ce qui est dommage car cela aurait pu améliorer son score.
 
 . Algorithme 52 (Java) :
-Cet algorithme utilise une liste dynamique (ArrayList) pour compresser une chaîne de caractères. Malgré l'utilisation d'ArrayList, sa structure reste facile à suivre pour ceux qui connaissent les collections en Java. Il a obtenu 10/20 pour avoir oublier la dernière méthode. Malgré cela, il a réussi 2 tests.
+Cet algorithme utilise une liste dynamique (ArrayList) pour compresser une chaîne de caractères. Malgré l'utilisation d'ArrayList, sa structure reste facile à suivre pour ceux qui connaissent le Java. Il a obtenu 10/20 pour avoir oublier la dernière méthode. Malgré cela, il a réussi 2 tests.
 
 ==== Efficacité
 
