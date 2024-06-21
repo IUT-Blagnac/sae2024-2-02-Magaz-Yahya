@@ -20,3 +20,37 @@ Dans cette deuxième phase, nous nous concentrons sur la comparaison et l'évalu
 - *Sobriété numérique* : Pour évaluer la sobriété des algorithmes, j'ai utilisé Codacy pour vérifier la consommation en ressources et l'efficience du code. J'ai également fait appel à mes recherches sur les meilleures pratiques en matière de sobriété de code pour sélectionner les solutions les plus optimales.
 
 Ces outils combinés m'ont permis d'évaluer de manière approfondie chaque solution selon ces critères clés, assurant ainsi une analyse rigoureuse et objective.
+
+=== Classement des algorithmes
+==== Simplicité
+
+[options="header"]
+|=======================
+|Classement    |N°Algorithme    |Langage       |Compile |Fonctionne  |Passe tests initiaux |Passe tests supplémentaires |Note
+|1             |13              |Python        |Oui     |Oui         |Oui                  |Non                         |18/20
+|2             |04              |Java          |Oui     |Oui         |Oui                  |Oui                         |19/20
+|3             |54              |Java          |Oui     |Oui         |Non                  |Non                         |7/20
+|4             |09              |Java          |Oui     |Oui         |Non                  |Non                         |7/20
+|5             |52              |Java          |Oui     |Oui         |Non                  |Non                         |10/20
+|=======================
+
+==== Descriptions des Algorithmes 
+
+. Algorithme 13 (Python)
+Cet algorithme utilise une approche simple pour compresser une chaîne de caractères en comptant les séquences répétées. La syntaxe claire de Python le rend facile à comprendre et à suivre. Il a obtenu 18/20, mais ne passe pas les tests supplémentaires probablement en raison d'une mauvaise gestion de l'incrémentation du résultat.
+
+. Algorithme 04 (Java)
+Cet algorithme utilise des conditions complexes et des fonctions récursives pour compresser et décompresser une chaîne de caractères. Il gère les erreurs avec AlgoException. Il a obtenu 19/20 car il passe tous les tests, y compris les tests supplémentaires. Il se distingue par sa capacité à gérer toutes les exigences du projet.
+
+. Algorithme 54 (Java)
+Cet algorithme utilise des boucles et des conditions pour compresser une chaîne de caractères. Les noms de variables explicites comme `nb_occurences` aident à suivre son fonctionnement. Il a obtenu 7/20 car il n'a complété que la moitié des algorithmes requis. Cependant, ce qu'il a implémenté reste simple et facile à suivre.
+
+. Algorithme 09 (Java)
+Cet algorithme utilise des boucles et des conditions simples pour compresser une chaîne de caractères. Les variables comme `indice` et `nbCar` sont intuitivement nommées. Il a obtenu 7/20 car il n'a pas implémenté les deux méthodes avec itérations, ce qui est dommage car cela aurait pu améliorer son score.
+
+. Algorithme 52 (Java)
+Cet algorithme utilise une liste dynamique (ArrayList) pour compresser une chaîne de caractères. Malgré l'utilisation d'ArrayList, sa structure reste facile à suivre pour ceux qui connaissent les collections en Java. Il a obtenu 10/20 pour avoir omis la dernière méthode. Malgré cela, il a réussi les tests qui ont été passés.
+
+==== Efficacité
+
+
