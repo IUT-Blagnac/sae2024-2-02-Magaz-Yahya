@@ -1,18 +1,12 @@
 package iut.sae.algo;
 
 
-public class efficacite54 {
+public class sobriete54 {
 
     public static void main(String[] args) {
         String message = "WWWWWWWWWBWWWWWWWWBBBWWWBWWWWWWW";
         System.out.println(RLE(message));
-
-        long startTime = System.nanoTime();    
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime); // en nanosecondes
-        System.out.println("Temps d'exécution : " + duration + " nanosecondes");
-        }
-    
+    }
 
     public static String RLE(String in) {
         // Permet d'éviter de créer un nouveau String à chaque concatenation
@@ -45,5 +39,4 @@ public class efficacite54 {
         }
         return compression;
     }
-
 }

@@ -6,6 +6,13 @@ public class efficacite23 {
         String Compressed = classicCompress(chaine); // Appel à la méthode de compression
         System.out.println("Chaîne après compression : " + Compressed); // Affiche la chaîne compressée
         System.out.println("Décompression : " + classicUnCompress(Compressed)); // Affiche la chaîne après décompression
+       
+       
+       
+        long startTime = System.nanoTime();
+        long endTime = System.nanoTime();
+        long duration = (endTime - startTime); 
+        System.out.println("Temps d'exécution : " + duration + " nanosecondes");
     }
 
     // Méthode pour compresser une chaîne en utilisant un algorithme simple de compression par comptage

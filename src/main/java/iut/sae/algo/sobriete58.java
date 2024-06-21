@@ -1,18 +1,12 @@
 package iut.sae.algo;
 
-public class efficacite58 {
 
-    public static void main(String[] args) {
-        String message = "WWWWWWWWWBWWWWWWWWBBBWWWBWWWWWWW";
-        System.out.println(RLE(message));
-
-        long startTime = System.nanoTime();    
-        long endTime = System.nanoTime();
-        long duration = (endTime - startTime); // en nanosecondes
-        System.out.println("Temps d'exécution : " + duration + " nanosecondes");
-        }
+public class sobriete58 {
 
     public static String RLE(String in) {
+        if (in == null || in.isEmpty()) {
+            return "";
+        }
         StringBuilder code = new StringBuilder();
         int longueur = in.length();
         int cpt = 1;
@@ -25,6 +19,7 @@ public class efficacite58 {
             code.append(cpt).append(currentChar);
             cpt = 1;
         }
+
         return code.toString();
     }
 
@@ -37,15 +32,20 @@ public class efficacite58 {
     }
 
     public static String unRLE(String in) {
+        if (in == null || in.isEmpty()) {
+            return "";
+        }
         StringBuilder code = new StringBuilder();
         int longueur = in.length();
         for (int i = 0; i < longueur; i += 2) {
-            if (Character.isDigit(in.charAt(i))) {
+            if (i + 1 < longueur && Character.isDigit(in.charAt(i))) {
                 int cpt = Character.getNumericValue(in.charAt(i));
                 char character = in.charAt(i + 1);
                 for (int j = 0; j < cpt; j++) {
                     code.append(character);
                 }
+            } else {
+                return "";
             }
         }
         return code.toString();
