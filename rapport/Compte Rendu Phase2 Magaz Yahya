@@ -1,1 +1,26 @@
+= Rapport d’évaluation des algorithmes SAE 2.02
+:icons: font
+:numbered:
+:toc: left
+:toc-title: Sommaire
+:toclevels: 2
 
+== Phase 2 : Comparaison et évaluation des solutions
+
+=== Introduction
+
+Dans cette deuxième phase, nous nous concentrons sur la comparaison et l'évaluation individuelle des solutions d'algorithmes qui nous ont été attribuées. L'objectif est de classer ces solutions en fonction de critères tels que la lisibilité du code, sa qualité, l'efficacité algorithmique, la sobriété numérique, et le temps d'exécution.
+
+=== Outils d'évaluation employés
+
+Dans cette phase d'évaluation, j'ai utilisé plusieurs outils pour comparer et évaluer les solutions proposées :
+
+=== Critères de comparaison
+
+- *Simplicité* : Pour évaluer la simplicité des solutions, j'ai privilégié les algorithmes dont le code était le plus facile à comprendre et le moins complexe. Cela inclut notamment ceux que j'ai pu assimiler rapidement et dont la logique était directe.
+
+- *Efficacité* : J'ai mesuré le temps d'exécution des différents algorithmes afin de déterminer leur performance. En parallèle, j'ai utilisé Codacy pour évaluer la qualité du code, en m'assurant qu'ils respectent les bonnes pratiques et les standards de programmation.
+
+- *Sobriété numérique* : Pour évaluer la sobriété des algorithmes, j'ai utilisé Codacy pour vérifier la consommation en ressources et l'efficience du code. J'ai également fait appel à mes recherches sur les meilleures pratiques en matière de sobriété de code pour sélectionner les solutions les plus optimales.
+
+Ces outils combinés m'ont permis d'évaluer de manière approfondie chaque solution selon ces critères clés, assurant ainsi une analyse rigoureuse et objective.
