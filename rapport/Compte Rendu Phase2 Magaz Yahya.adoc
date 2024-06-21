@@ -17,7 +17,7 @@ Dans cette deuxième phase, nous nous concentrons sur la comparaison et l'évalu
 
 - *Efficacité* : J'ai mesuré le temps d'exécution des différents algorithmes afin de déterminer leur performance. En parallèle, j'ai utilisé Codacy pour évaluer la qualité du code, en m'assurant qu'ils respectent les bonnes pratiques et les standards de programmation.
 
-- *Sobriété numérique* : Pour évaluer la sobriété des algorithmes, j'ai utilisé Codacy pour vérifier la consommation en ressources et l'efficience du code. J'ai également fait appel à mes recherches sur les meilleures pratiques en matière de sobriété de code pour sélectionner les solutions les plus optimales.
+- *Sobriété* : Pour évaluer la sobriété des algorithmes, j'ai utilisé Codacy pour vérifier la consommation en ressources et l'efficience du code. J'ai également fait appel à mes recherches sur les meilleures pratiques en matière de sobriété de code pour sélectionner les solutions les plus optimales.
 
 Ces outils combinés m'ont permis d'évaluer de manière approfondie chaque solution selon ces critères clés, assurant ainsi une analyse rigoureuse et objective.
 
@@ -26,31 +26,74 @@ Ces outils combinés m'ont permis d'évaluer de manière approfondie chaque solu
 
 [options="header"]
 |=======================
-|Classement    |N°Algorithme    |Langage       |Compile |Fonctionne  |Passe tests initiaux |Passe tests supplémentaires |Note
-|1             |13              |Python        |Oui     |Oui         |Oui                  |Non                         |18/20
-|2             |04              |Java          |Oui     |Oui         |Oui                  |Oui                         |19/20
-|3             |54              |Java          |Oui     |Oui         |Non                  |Non                         |7/20
-|4             |09              |Java          |Oui     |Oui         |Non                  |Non                         |7/20
-|5             |52              |Java          |Oui     |Oui         |Non                  |Non                         |10/20
+|Classement    |N°Algorithme    |Langage       |Compile |Fonctionne  |Tests fournis initialement |Tests supplémentaires       |Note
+|1             |13              |Python        |Oui     |Oui         |Oui                        |Non                         |18/20
+|2             |04              |Java          |Oui     |Oui         |Oui                        |Oui                         |19/20
+|3             |54              |Java          |Oui     |Oui         |Non                        |Non                         |07/20
+|4             |09              |Java          |Oui     |Oui         |Non                        |Non                         |07/20
+|5             |52              |Java          |Oui     |Oui         |Non                        |Non                         |10/20
 |=======================
 
 ==== Descriptions des Algorithmes 
 
-. Algorithme 13 (Python)
+. Algorithme 13 (Python) :
 Cet algorithme utilise une approche simple pour compresser une chaîne de caractères en comptant les séquences répétées. La syntaxe claire de Python le rend facile à comprendre et à suivre. Il a obtenu 18/20, mais ne passe pas les tests supplémentaires probablement en raison d'une mauvaise gestion de l'incrémentation du résultat.
 
-. Algorithme 04 (Java)
+. Algorithme 04 (Java) :
 Cet algorithme utilise des conditions complexes et des fonctions récursives pour compresser et décompresser une chaîne de caractères. Il gère les erreurs avec AlgoException. Il a obtenu 19/20 car il passe tous les tests, y compris les tests supplémentaires. Il se distingue par sa capacité à gérer toutes les exigences du projet.
 
-. Algorithme 54 (Java)
+. Algorithme 54 (Java) :
 Cet algorithme utilise des boucles et des conditions pour compresser une chaîne de caractères. Les noms de variables explicites comme `nb_occurences` aident à suivre son fonctionnement. Il a obtenu 7/20 car il n'a complété que la moitié des algorithmes requis. Cependant, ce qu'il a implémenté reste simple et facile à suivre.
 
-. Algorithme 09 (Java)
+. Algorithme 09 (Java) :
 Cet algorithme utilise des boucles et des conditions simples pour compresser une chaîne de caractères. Les variables comme `indice` et `nbCar` sont intuitivement nommées. Il a obtenu 7/20 car il n'a pas implémenté les deux méthodes avec itérations, ce qui est dommage car cela aurait pu améliorer son score.
 
-. Algorithme 52 (Java)
-Cet algorithme utilise une liste dynamique (ArrayList) pour compresser une chaîne de caractères. Malgré l'utilisation d'ArrayList, sa structure reste facile à suivre pour ceux qui connaissent les collections en Java. Il a obtenu 10/20 pour avoir omis la dernière méthode. Malgré cela, il a réussi les tests qui ont été passés.
+. Algorithme 52 (Java) :
+Cet algorithme utilise une liste dynamique (ArrayList) pour compresser une chaîne de caractères. Malgré l'utilisation d'ArrayList, sa structure reste facile à suivre pour ceux qui connaissent les collections en Java. Il a obtenu 10/20 pour avoir oublier la dernière méthode. Malgré cela, il a réussi 2 tests.
 
 ==== Efficacité
+
+===== Évaluation Codacy
+
+Codacy attribue une note basée sur plusieurs critères :
+
+- Taille du code : nombre de lignes de code, de lignes de code source, et de lignes de code commentées.
+- Reproduction : nombre de clones et lignes de code dupliquées.
+
+Les résultats de Codacy ne peuvent pas être pris en compte à 100% pour les algorithmes incomplets, car ces mesures sont affectées par le nombre de méthodes implémentées.
+
+===== Efficacité du code
+
+L'efficacité d'un code se mesure principalement par sa complexité algorithmique, qui indique comment le temps de calcul évolue en fonction de la taille des données en entrée. Par exemple, une complexité de O(n) signifie que si la taille des données double, le temps de calcul double également. Une complexité de O(n^2) indique que le temps de calcul quadruple si la taille des données double.
+
+
+[options="header"]
+|=======================
+|Classement    |N°Algorithme    |Langage       |Compile |Fonctionne  |Tests fournis initialement|Tests supplémentaires       |Note       |Codacy   |Temps (en nanosecondes)
+|1             |13              |C             |Oui     |Oui         |Oui                       |Oui                         |19.5/20    |D        |100
+|2             |58              |Java          |Oui     |Oui         |Oui                       |Oui                         |19/20      |C        |150
+|3             |03              |C             |Oui     |Oui         |Non                       |Non                         |07/20      |B        |200
+|3             |54              |Java          |Oui     |Oui         |Non                       |Non                         |07/20      |B        |100
+|5             |23              |Java          |Oui     |Oui         |Non                       |Non                         |05/20      |A        |100
+|=======================
+
+===== Descriptif des algorithmes
+
+. Algorithme 13 ( C ) :
+Cet algorithme utilise une approche simple pour compresser une chaîne de caractères en comptant les séquences répétées. La syntaxe claire et l'efficacité du code en font le meilleur choix, avec un temps d'exécution de 100 nanosecondes. Il a obtenu une note de 19.5/20 et passe tous les tests, y compris les tests supplémentaires. Codacy note : D.
+
+. Algorithme 58 (Java) :
+Cet algorithme utilise des boucles et des conditions pour compresser une chaîne de caractères. Bien qu'il soit légèrement plus lent (150 nanosecondes), il passe tous les tests et obtient une note de 19/20. Son code est bien structuré et lisible. Codacy note : C.
+
+. Algorithme 03 ( C ) :
+Cet algorithme utilise une approche directe pour la compression, mais il ne passe pas les tests supplémentaires et a obtenu une note de 7/20. Son temps d'exécution est de 200 nanosecondes, ce qui est plus lent que les autres. Codacy note : B. Cet algorithme n'a implémenté que la moitié des méthodes requises, donc son score Codacy ne peut pas être pris en compte entièrement.
+
+. Algorithme 54 (Java) :
+Cet algorithme utilise des boucles et des conditions simples pour la compression. Il ne passe pas les tests supplémentaires et a obtenu une note de 7/20. Son temps d'exécution est de 100 nanosecondes, ce qui est rapide, mais son score de Codacy est moyen. Codacy note : B. Cet algorithme n'a implémenté que la moitié des méthodes requises, donc son score Codacy ne peut
+
+. Algorithme 23 (Java) :
+Cet algorithme utilise une approche similaire aux autres, mais ne passe pas les tests supplémentaires et a obtenu une note de 5/20. Il a le meilleur score Codacy (A) et un temps d'exécution de 100 nanosecondes, ce qui indique une bonne efficacité. Cependant, en raison de l'incomplétude du code (seulement la moitié des méthodes requises implémentées), ces résultats Codacy ne peuvent pas être pris en compte à 100%.
+
+==== Sobriété
 
 
