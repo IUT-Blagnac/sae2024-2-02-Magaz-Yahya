@@ -62,6 +62,8 @@ Codacy attribue une note basée sur plusieurs critères :
 
 Les résultats de Codacy ne peuvent pas être pris en compte à 100% pour les algorithmes incomplets, car ces mesures sont affectées par le nombre de méthodes implémentées.
 
+image::https://github.com/IUT-Blagnac/sae2024-2-02-Magaz-Yahya/blob/main/codacyTrie.PNG[]
+
 ===== Efficacité du code
 
 L'efficacité d'un code se mesure principalement par sa complexité algorithmique, qui indique comment le temps de calcul évolue en fonction de la taille des données en entrée. Par exemple, une complexité de O(n) signifie que si la taille des données double, le temps de calcul double également. Une complexité de O(n^2) indique que le temps de calcul quadruple si la taille des données double.
@@ -105,6 +107,8 @@ Codacy attribue une note basée sur plusieurs critères :
 
 Les résultats de Codacy ne peuvent pas être pris en compte à 100% pour les algorithmes incomplets, car ces mesures sont affectées par le nombre de méthodes implémentées.
 
+image::https://github.com/IUT-Blagnac/sae2024-2-02-Magaz-Yahya/blob/main/codacyTrieSobriete.PNG[]
+
 ===== Sobriété du code
 Un code sobre en programmation se distingue par sa capacité à utiliser efficacement les ressources disponibles, telles que la mémoire et le temps de traitement. Il évite les pratiques excessivement complexes ou répétitives, ce qui permet d'optimiser l'utilisation des ressources matérielles et de réduire les temps d'exécution.
 
@@ -120,16 +124,16 @@ Un code sobre en programmation se distingue par sa capacité à utiliser efficac
 
 ===== Descriptif des algorithmes
 
-. Algorithme 45 (Java) ::
+. Algorithme 45 (Java) :
   Cet algorithme en Java utilise une approche de compression en comptant les séquences répétées dans une chaîne de caractères. Il compile avec succès et fonctionne correctement avec les tests initiaux et supplémentaires. Il obtient une note de 19/20 et une note Codacy de A.
 
-. Algorithme 11 ( C ) ::
+. Algorithme 11 ( C ) :
   Cet algorithme écrit en langage C implémente une méthode de compression basée sur le comptage des occurrences de caractères consécutifs. Il compile sans erreur et passe tous les tests requis, y compris les tests supplémentaires. Il obtient une note de 19/20 et une note Codacy de B.
 
-. Algorithme 58 (Java) ::
+. Algorithme 58 (Java) :
   Cet algorithme en Java utilise des boucles et des conditions pour compresser une chaîne de caractères en comptant les séquences répétées. Il compile avec succès et réussit tous les tests fournis initialement ainsi que les tests supplémentaires. Il obtient une note de 19/20 et une note Codacy de C.
 
-. Algorithme 54 (Java) ::
+. Algorithme 54 (Java) :
   Cet algorithme en Java a seulement une partie de ses méthodes implémentées et ne parvient pas à passer les tests requis. Il obtient une note de 7/20 et une note Codacy de D.
 
 == Conclusion
